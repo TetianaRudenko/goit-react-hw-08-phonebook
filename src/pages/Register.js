@@ -3,14 +3,14 @@ import { Section } from "components/Section/Section";
 import { Helmet } from "react-helmet";
 
 const Register = () => (
-  <> 
-  <Helmet>
+  
+  <Section>
+    <Helmet>
       <title> Registration </title>
     </Helmet>
-      <Section>
     <RegisterForm />
   </Section>
-  </>
+
 );
 
 export default Register;
