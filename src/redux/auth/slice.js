@@ -15,7 +15,7 @@ const initialState = {
 const authSlice = createSlice({
   name: 'auth',
   initialState,
-  extraReducers: builder =>
+  extraReducers: (builder) =>{
     builder
       .addCase(register.pending, (state, action) => state )
       .addCase(register.fulfilled, (state, action) => {
@@ -52,7 +52,7 @@ const authSlice = createSlice({
           logIn.rejected,
           logOut.rejected
           ),(state, action) => state)
-  
+  }
 });
 
 export const authReducer = authSlice.reducer;

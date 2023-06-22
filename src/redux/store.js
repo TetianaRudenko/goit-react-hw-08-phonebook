@@ -1,4 +1,4 @@
-import { configureStore, combineReducers } from "@reduxjs/toolkit";
+import { configureStore,  } from "@reduxjs/toolkit";
 import {
   persistStore, persistReducer,
   FLUSH,
@@ -21,14 +21,15 @@ const authPersistConfig = {
 
 const authPersistedReducer = persistReducer(authPersistConfig, authReducer);
 
-const rootReducer = combineReducers({
-  contacts: contactsReducer,
-  filter: filterReducer,
-  auth: authPersistedReducer,
-});
+/* const rootReducer = combineReducers({
+}); */
 
 const store = configureStore({
-  reducer: rootReducer,
+  reducer: {
+    contacts: contactsReducer,
+    filter: filterReducer,
+    auth: authPersistedReducer,
+  },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({
       serializableCheck: {
