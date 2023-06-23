@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import { lazy, useEffect } from "react";
 //import { AppBar } from "./AppBar/AppBar";
-//import { GlobalStyle } from "./GlobalStyle";
+import { GlobalStyle } from "./GlobalStyle";
 import { Layout } from "./Layout";
 import { RestrictedRoute } from "./RestrictedRoute";
 import { PrivateRoute } from './PrivateRoute';
@@ -25,9 +25,10 @@ export const App = () => {
   }, [dispatch]);
   
   return isRefreshing ? (
-  <b> Refreshing user...</b>) : (
+    <b> Refreshing user...</b>
+  ) : (
     <>
-      {/* <GlobalStyle /> */}
+      <GlobalStyle />
       
       <Routes>
         <Route path="/" element={<Layout />}>

@@ -9,7 +9,7 @@ export const LoginForm = () => {
 
   const handleSubmit = e => {
     e.preventDefault();
-    const form = e.currentTarget;
+    const form = e.target;
     dispatch(
       logIn({
         email: form.elements.email.value,

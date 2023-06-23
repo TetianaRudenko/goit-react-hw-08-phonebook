@@ -50,7 +50,7 @@ const ContactForm = () => {
     const newContact = {
       createdAt: Date.now(),
       name: values.name,
-      phone: values.number,
+      number: values.number,
     };
     if (contacts.find(contact => contact.name.toUpperCase() === values.name.toUpperCase())) {
       alert(`${values.name} is already in contacts`)
